@@ -1,0 +1,14 @@
+{
+    "id": "jupyter-nb",
+    "version": "1.0.0",
+    "name": "Data Science Jupyter Notebooks",
+    "description": "Data science and Jupyter Notebooks development with Miniconda in Python 3. Installs dependencies from your environment.yml file, and the Python and Jupyter extensions.",
+    "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/jupyter-nb",
+    "publisher": "Dev Container Spec Maintainers",
+    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "platforms": [
+        "Python",
+        "Anaconda",
+        "Miniconda"
+    ]
+}
