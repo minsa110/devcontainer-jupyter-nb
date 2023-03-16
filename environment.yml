@@ -2,7 +2,7 @@ name: myenv
 channels:
   - conda-forge
 dependencies:
-  - python=latest
+  - python
   - ipykernel # required for jupyter notebook in VS Code
   - pandas
   - numpy

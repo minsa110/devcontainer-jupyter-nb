@@ -8,7 +8,7 @@
     "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
     "platforms": [
         "Python",
-        "Miniconda",
-        "Jupyter"
+        "Jupyter",
+        "Miniconda"
     ]
 }

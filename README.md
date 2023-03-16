@@ -12,7 +12,7 @@
 | *Published image architecture(s)* | x86-64 |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
-| *Languages, platforms* | Python, Anaconda, Miniconda |
+| *Languages, platforms* | Python, Jupyter, Miniconda |
 
 ## Using this image
 
@@ -30,18 +30,6 @@ Alternatively, you can use the contents of `Dockerfile` to fully customize your 
 This dev container and its associated image includes [the `conda` package manager](https://aka.ms/vscode-remote/conda/about). Additional packages installed using Conda will be downloaded from Anaconda or another repository if you configure one. To reconfigure Conda in this container to access an alternative repository, please see information on [configuring Conda channels here](https://aka.ms/vscode-remote/conda/channel-setup).
 
 Access to the Anaconda repository is covered by the [Anaconda Terms of Service](https://aka.ms/vscode-remote/conda/terms), which may require some organizations to obtain a commercial license from Anaconda. **However**, when this dev container or its associated image is used with GitHub Codespaces or GitHub Actions, **all users are permitted** to use the Anaconda Repository through the service, including organizations normally required by Anaconda to obtain a paid license for commercial activities. Note that third-party packages may be licensed by their publishers in ways that impact your intellectual property, and are used at your own risk.
-
-
-#### Using the forwardPorts property
-
-By default, frameworks like Flask only listens to localhost inside the container. As a result, we recommend using the `forwardPorts` property (available in v0.98.0+) to make these ports available locally.
-
-```json
-"forwardPorts": [5000]
-```
-
-The `appPort` property [publishes](https://docs.docker.com/config/containers/container-networking/#published-ports) rather than forwards the port, so applications need to listen to `*` or `0.0.0.0` for the application to be accessible externally. This conflicts with the defaults of some Python frameworks, but fortunately the `forwardPorts` property does not have this limitation.
-
 
 #### Installing Node.js
 
@@ -88,6 +76,16 @@ RUN conda install -y python=3.6 \
 ```
 
 See the [pipx documentation](https://pipxproject.github.io/pipx/docs/) for additional information.
+
+#### [Optional] Using the forwardPorts property
+
+By default, frameworks like Flask only listens to localhost inside the container. As a result, we recommend using the `forwardPorts` property (available in v0.98.0+) to make these ports available locally.
+
+```json
+"forwardPorts": [5000]
+```
+
+The `appPort` property [publishes](https://docs.docker.com/config/containers/container-networking/#published-ports) rather than forwards the port, so applications need to listen to `*` or `0.0.0.0` for the application to be accessible externally. This conflicts with the defaults of some Python frameworks, but fortunately the `forwardPorts` property does not have this limitation.
 
 ### [Optional] Adding the contents of environment.yml to the image
 
