@@ -1,0 +1,14 @@
+name: myenv
+channels:
+  - conda-forge
+dependencies:
+  - python=latest
+  - ipykernel # required for jupyter notebook in VS Code
+  - pandas
+  - numpy
+  - matplotlib
+  - plotly
+  - seaborn
+#   - pip  # if you need more packages installed from pip 
+#   - pip:
+#     - foo
