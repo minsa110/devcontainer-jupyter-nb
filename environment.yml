@@ -4,6 +4,7 @@ channels:
 dependencies:
   - python
   - ipykernel # required for jupyter notebook in VS Code
+  - ipywidgets
   - pandas
   - numpy
   - matplotlib
