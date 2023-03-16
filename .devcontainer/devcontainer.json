@@ -1,9 +1,10 @@
 {
 	"name": "Data Science Jupyter Notebooks (Python)",
-    "build": {
-		"context": "..",
-        "dockerfile": "./Dockerfile"
-    },
+    // "build": {
+	// 	"context": "..",
+    //     "dockerfile": "./Dockerfile"
+    // },
+	"image": "mcr.microsoft.com/devcontainers/miniconda:0-3",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
     "features": {
@@ -11,7 +12,7 @@
     },
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "conda init",
+	"postCreateCommand": "conda init && conda env create -f environment.yml",
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
