@@ -7,7 +7,6 @@ dependencies:
   - pandas
   - numpy
   - matplotlib
-  - plotly
 #   - pip  # if you need more packages installed from pip 
 #   - pip:
 #     - foo
