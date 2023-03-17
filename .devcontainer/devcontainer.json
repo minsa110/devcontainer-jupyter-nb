@@ -2,7 +2,7 @@
 	"name": "Data Science Jupyter Notebooks (Python)",
     "build": {
 		"context": "..",
-        "dockerfile": "./Dockerfile"
+        "dockerfile": "Dockerfile"
     },
 	// "image": "mcr.microsoft.com/devcontainers/miniconda:0-3",
 
