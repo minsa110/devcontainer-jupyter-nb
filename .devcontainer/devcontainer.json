@@ -1,13 +1,19 @@
 {
 	"name": "Data Science Jupyter Notebooks (Python)",
-	"image": "mcr.microsoft.com/devcontainers/miniconda:0-3",
+    "build": {
+		"context": "..",
+        "dockerfile": "./Dockerfile"
+    },
+	// "image": "mcr.microsoft.com/devcontainers/miniconda:0-3",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "conda init && conda env create -f environment.yml",
-	"postCreateCommand": "bash .devcontainer/update-env.sh",
+	"postCreateCommand": "conda init",
+	// "postCreateCommand": "conda init && conda activate myenv",
+	// "postCreateCommand": "bash .devcontainer/update-env.sh",
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -19,7 +25,7 @@
 			// Set *default* container specific settings.json values on container create.
 			"settings": {
 				"[python]": {
-					"defaultInterpreterPath": "/opt/conda/envs/myenv/bin/python",
+					"defaultInterpreterPath": "/opt/conda/envs/myenv",
 					"editor.defaultFormatter": "ms-python.black-formatter",
 					"editor.formatOnType": true,
 					"editor.formatOnSave": true
@@ -35,7 +41,8 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"ms-toolsai.jupyter",
-				"ms-python.python"
+				"ms-python.python",
+				"ms-python.pylint"
 			]
 		}
 	},
