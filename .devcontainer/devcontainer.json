@@ -9,7 +9,7 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "conda init && conda env create -f environment.yml",
-	"postCreateCommand": "if [ -f environment.yml* ]; then conda init && conda env create -f environment.yml; fi",
+	"postCreateCommand": "update-env.sh",
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -21,7 +21,7 @@
 			// Set *default* container specific settings.json values on container create.
 			"settings": {
 				"[python]": {
-					"defaultInterpreterPath": "/opt/conda/bin/python",
+					"defaultInterpreterPath": "/opt/conda/envs/myenv/bin/python",
 					"editor.defaultFormatter": "ms-python.black-formatter",
 					"editor.formatOnType": true,
 					"editor.formatOnSave": true
