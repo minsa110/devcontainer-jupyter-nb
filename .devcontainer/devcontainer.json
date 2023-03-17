@@ -1,9 +1,5 @@
 {
 	"name": "Data Science Jupyter Notebooks (Python)",
-    // "build": {
-	// 	"context": "..",
-    //     "dockerfile": "./Dockerfile"
-    // },
 	"image": "mcr.microsoft.com/devcontainers/miniconda:0-3",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -25,8 +21,7 @@
 			// Set *default* container specific settings.json values on container create.
 			"settings": {
 				"[python]": {
-					// "defaultInterpreterPath": "/opt/conda/bin/python",
-					"defaultInterpreterPath": "/opt/conda/bin/conda",
+					"defaultInterpreterPath": "/opt/conda/bin/python",
 					"editor.defaultFormatter": "ms-python.black-formatter",
 					"editor.formatOnType": true,
 					"editor.formatOnSave": true
