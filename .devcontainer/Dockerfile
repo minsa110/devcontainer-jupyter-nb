@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/devcontainers/miniconda:0-3
 
-# Use libmamba as dependency solver for conda for faster installs
+# Install mamba and use libmamba as dependency solver for conda for faster installs
 RUN conda install -n base -c conda-forge mamba conda-libmamba-solver -y \
     && conda config --set solver libmamba
 
