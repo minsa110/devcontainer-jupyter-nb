@@ -10,7 +10,7 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "conda init && conda env create -f environment.yml",
-	"postCreateCommand": "conda init",
+	"postCreateCommand": "conda init && conda activate myenv",
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
