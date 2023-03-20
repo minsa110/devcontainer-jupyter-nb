@@ -5,8 +5,8 @@
         "dockerfile": "Dockerfile"
     },
 
-	"updateContentCommand": "conda init --all",
-	"postCreateCommand": "conda activate myenv",
+	"postCreateCommand": "conda init --all",
+	"postAttachCommand": "conda activate myenv",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
