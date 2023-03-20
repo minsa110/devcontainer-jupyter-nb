@@ -5,12 +5,11 @@
         "dockerfile": "Dockerfile"
     },
 
-	"onCreateCommand": "conda init --all",
-	"postCreateCommand": "conda activate myenv",
+	"postStartCommand ": "conda init --all && conda activate myenv",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
-	
+
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	
